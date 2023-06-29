@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <script>
+    function rem() {
+      var htmlEle = document.documentElement;
+      var winWidth = htmlEle.clientWidth || document.body.clientWidth;
+      var width = winWidth;
+      console.log(width)
+      htmlEle.style.fontSize = Math.ceil(100 * (width / 1920)) + 'px';
+    };
+    const isMobile = function () {
+      let userAgentInfo = navigator.userAgent;
+      let Agents = [
+        "Android",
+        "iPhone",
+        "SymbianOS",
+        "Windows Phone",
+        "iPad",
+        "iPod",
+      ];
+      let getArr = Agents.filter((i) => userAgentInfo.includes(i));
+      return getArr.length ? true : false;
+    }
+    if (isMobile()) {
+      rem()
+    } else {
+      var htmlEle = document.documentElement;
+      htmlEle.style.fontSize = '20px';
+    }
+  </script>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+<style type="text/css">
+  bbmt0 {
+    color: #AA8989;
+    font-style: italic;
+  }
+
+  bbmt1 {
+    color: #CC5656;
+    font-style: italic;
+  }
+
+  bbm {
+    color: red;
+  }
+
+  bbm0 {
+    color: gray;
+  }
+
+  bbm1 {
+    color: chocolate;
+  }
+
+  bbm2 {
+    color: blueviolet;
+  }
+
+  bbm3 {
+    color: green;
+  }
+
+  bbm4 {
+    color: pink;
+  }
+
+  bbm5 {
+    color: blue;
+  }
+
+  bbm6 {
+    color: brown;
+  }
+
+  bbm7 {
+    color: gold;
+  }
+
+  bbm8 {
+    color: hotpink;
+  }
+
+  bbm9 {
+    color: yellow;
+  }
+
+  bbma {
+    color: #123456;
+  }
+
+  bbmp {
+    color: #654321;
+  }
+
+  pred {
+    color: red;
+  }
+</style>
+
+</html>
